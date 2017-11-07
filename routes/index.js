@@ -25,5 +25,13 @@ router.post('/test/submit', function(req, res, next) {
     var value_name = req.body.id;  //retrieve the data associated with name
     res.send("hello " + value_name);
 });
+router.post('/readNameAndRespand',function (req,res,next) {
+    var body=JSON.stringify(req.body);
+    var params = JSON.stringify(req.params);
+    var value_name=req.body.name;
+    req.send("hello"+value_name);
+
+});
+
 module.exports = router;
 
