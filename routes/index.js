@@ -21,12 +21,12 @@ router.use(bodyParser.urlencoded({ extended: true })); // for parsing applicatio
 //    //res.redirect('/test/'+id);
 //     res.send("hello " + id);
 // })
-// router.post('/test/submit', function(req, res, next) {
-//     var body = JSON.stringify(req.body);  //if wanted entire body as JSON
-//     var params = JSON.stringify(req.params);//if wanted parameters
-//     var value_name = req.body.id;  //retrieve the data associated with name
-//     res.send("hello " + value_name);
-// });
+router.post('/test/submit', function(req, res, next) {
+    var body = JSON.stringify(req.body);  //if wanted entire body as JSON
+    var params = JSON.stringify(req.params);//if wanted parameters
+    var value_name = req.body.id;  //retrieve the data associated with name
+    res.send("hello " + value_name);
+});
 router.post('/readNameAndRespond',function (req,res,next) {
     var body=JSON.stringify(req.body);
     var params = JSON.stringify(req.params);
