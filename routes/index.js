@@ -9,7 +9,7 @@ var path = require ('path'); //to work with separtors on any OS including Window
 var querystring = require('querystring'); //for use in GET Query string of form URI/path?name=value
 /* GET home page. */
 
-module.exports = router;
+
 
 router.use(bodyParser.json()); // for parsing application/json
 router.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencode
@@ -31,9 +31,10 @@ router.post('/readNameAndRespond',function (req,res,next) {
     var body=JSON.stringify(req.body);
     var params = JSON.stringify(req.params);
     var value_name=req.body.name;
-    req.send("hello"+value_name);
+    res.send("hello"+value_name);
 
 });
 
 
 
+module.exports = router;
