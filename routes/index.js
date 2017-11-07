@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 var path = require ('path'); //to work with separtors on any OS including Windows
 var querystring = require('querystring'); //for use in GET Query string of form URI/path?name=value
 
+module.exports = router;
 router.use(bodyParser.json()); // for parsing application/json
 router.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencode
 
@@ -33,5 +34,5 @@ router.post('/readNameAndRespand',function (req,res,next) {
 
 });
 
-module.exports = router;
+
 
