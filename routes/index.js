@@ -30,7 +30,7 @@ router.post('/test/submit', function(req, res, next) {
 router.post('/readNameAndRespond',function (req,res,next) {
     var body=JSON.stringify(req.body);
     var params = JSON.stringify(req.params);
-    var value_name=req.body.name;
+    var value_name=req.body.email;
     res.send("hello"+value_name);
 
 });
